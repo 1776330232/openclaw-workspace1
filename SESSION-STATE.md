@@ -34,7 +34,12 @@
 - [ ] 使用 WAL Protocol 记录重要信息
 - [ ] 尝试 10 次再放弃 (Relentless Resourcefulness)
 - [x] 用户问问题时，先搜最优解再回答（不再让用户做选择）
-- [ ] 安装并测试 atxp-memory 记忆备份
+- [x] 安装并测试 atxp-memory 记忆备份
+- [x] 长期记忆 MEMORY.md 已创建
+- [x] 每日记忆格式：混搭 (.learnings + memory/YYYY-MM-DD.md)
+- [x] 导入 Notion 工作日报（2月26、27日）
+- [x] 设置 Capability Evolver 每天早上运行（8点）
+- [ ] 记录：每次错误后自动运行
 
 ---
 

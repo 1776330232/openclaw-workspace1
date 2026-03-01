@@ -285,6 +285,30 @@ find-skills 已安装，可以用 npx skills find 搜索新技能。
 
 ---
 
+## [LRN-20260301-011] workflow
+
+**Logged**: 2026-03-01T19:15:00+08:00
+**Priority**: high
+**Status**: resolved
+**Area**: workflow
+
+### Summary
+
+设置 Capability Evolver 每天早上 8 点自动运行。
+
+### Details
+
+- 定时任务：每天 8:00 运行
+- 模式：--review（审核模式）
+- 汇报方式：webchat 推送结果
+
+### Metadata
+
+- Source: user_feedback
+- Tags: capability-evolver, cron, automation
+
+---
+
 ## [LRN-20260301-003] knowledge_gap
 
 **Logged**: 2026-03-01T17:20:00+08:00
