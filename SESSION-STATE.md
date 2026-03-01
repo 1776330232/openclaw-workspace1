@@ -39,6 +39,7 @@
 - [x] 每日记忆格式：混搭 (.learnings + memory/YYYY-MM-DD.md)
 - [x] 导入 Notion 工作日报（2月26、27日）
 - [x] 设置 Capability Evolver 每天早上运行（8点）
+- [x] 改成每 30 分钟运行一次（启动时/工作期间）
 - [ ] 记录：每次错误后自动运行
 
 ---
