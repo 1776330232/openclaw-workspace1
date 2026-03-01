@@ -53,3 +53,14 @@
 - 模型：MiniMax-M2.5
 - GitHub：1776330232/openclaw-workspace1
 
+---
+
+## 记忆格式（2026-03-01 更新）
+
+### 混搭方式
+
+1. **.learnings/** - 结构化学习记录（ID、类型、优先级、总结）
+2. **memory/YYYY-MM-DD.md** - 每日工作日志（完成事项、待办）
+
+两者都要记录，定期推送到 GitHub。
+
