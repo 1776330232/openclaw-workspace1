@@ -259,6 +259,32 @@ find-skills 已安装，可以用 npx skills find 搜索新技能。
 
 ---
 
+## [LRN-20260301-010] correction
+
+**Logged**: 2026-03-01T18:45:00+08:00
+**Priority**: critical
+**Status**: resolved
+**Area**: memory
+
+### Summary
+
+从未创建 MEMORY.md 长期记忆，用户指出后才意识到问题。
+
+### Details
+
+使用了 3-4 天，只有每日记忆 memory/*.md，但没有创建 MEMORY.md（精选长期记忆）。
+
+### Suggested Action
+
+定期（每次重要学习后）更新 MEMORY.md，把精华内容沉淀下来。
+
+### Metadata
+
+- Source: user_feedback
+- Tags: memory, long-term, correction
+
+---
+
 ## [LRN-20260301-003] knowledge_gap
 
 **Logged**: 2026-03-01T17:20:00+08:00
