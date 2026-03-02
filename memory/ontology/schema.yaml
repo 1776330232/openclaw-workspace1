@@ -1,0 +1,63 @@
+# Ontology Schema - 核心类型定义
+
+types:
+  Person:
+    required: [name]
+    properties:
+      name: string
+      role: enum[user, assistant, other]
+      goals: list
+      preferences: map
+  
+  Project:
+    required: [name, status]
+    properties:
+      name: string
+      status: enum[active, paused, completed, abandoned]
+      goals: list
+      created: datetime
+  
+  Skill:
+    required: [name, status]
+    properties:
+      name: string
+      status: enum[installed, broken, removed]
+      purpose: string
+      installed_at: datetime
+  
+  Memory:
+    required: [type, date]
+    properties:
+      type: enum[daily, longterm, learning]
+      date: string
+      status: enum[intact, corrupted, missing]
+      backup_locations: list
+
+  Task:
+    required: [title, status]
+    properties:
+      title: string
+      status: enum[pending, done, failed]
+      due: datetime
+      recurring: boolean
+
+relations:
+  has_skill:
+    from_types: [Person]
+    to_types: [Skill]
+    cardinality: many_to_many
+  
+  has_project:
+    from_types: [Person]
+    to_types: [Project]
+    cardinality: one_to_many
+  
+  has_task:
+    from_types: [Project]
+    to_types: [Task]
+    cardinality: one_to_many
+  
+  backed_up_to:
+    from_types: [Memory]
+    to_types: [Person]
+    cardinality: many_to_one
