@@ -10,3 +10,4 @@
 {"op":"relate","from":"person_hang","rel":"has_project","to":"project_ai_创业"}
 {"op":"relate","from":"person_hang","rel":"has_skill","to":"skill_capability_evolover"}
 {"op":"relate","from":"person_hang","rel":"has_skill","to":"skill_ontology"}
+{"op":"create","entity":{"id":"memory_2026_03_02","type":"Memory","properties":{"type":"daily","date":"2026-03-02","status":"intact","backup_locations":["GitHub","本地"],"note":"记忆系统加固日"}}}
