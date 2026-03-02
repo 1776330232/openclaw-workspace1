@@ -1,84 +1,50 @@
-# MEMORY.md - 长期记忆
+# MEMORY.md - 长期记忆（精简版）
 
-> 精选的、值得长期记住的内容
+> 只记录最重要的信息，避免无用内容
 
 ---
 
-## 关于 Hang（你）
+## 关于 Hang
 
 - **目标**：创建在线业务，赚到第一笔收入，AI 创业
-- **偏好**：喜欢详细回复，用中文交流
-- **时间**：天津和平区，时区 Asia/Shanghai
+- **位置**：天津和平区，时区 Asia/Shanghai
+- **偏好**：详细回复，中文交流，主动积极
 
 ---
 
 ## 核心工作流
 
-### 1. 技能选择原则（2026-03-01）
-- 用户问问题 → 先搜最优解
-- 不是最优解 → 主动搜索新技能
-- 不要让用户做选择
-
-### 2. WAL Protocol
-- 用户纠正/决定 → 先写下来再回复
-- 记录到 SESSION-STATE.md
-
-### 3. Relentless Resourcefulness
-- 尝试 10 种方法再放弃
-- 不要试一次就说"不会"
+1. **技能选择** - 先搜最优解，不让用户做选择
+2. **WAL Protocol** - 用户纠正/决定 → 先写下来再回复
+3. **Relentless Resourcefulness** - 尝试10种方法再放弃
 
 ---
 
-## 重要教训
+## 已安装技能（有用的）
 
-### LRN-20260301-009（2026-03-01）
-- 不要让用户做选择
-- 直接给最优解
-
----
-
-## 已安装技能
-
-- find-skills - 搜索新技能
-- proactive-agent - 主动型架构
-- skill-creator - 创建技能
-- ontology - 知识图谱
-- tianqi-chaxun - 天气查询
-- daiban-guanliqi - 待办管理
+| 技能 | 用途 |
+|------|------|
+| ontology | 结构化知识图谱 |
+| capability-evolver | 自我进化 |
+| find-skills | 搜索新技能 |
+| proactive-agent | 主动型架构 |
+| tianqi-chaxun | 天气查询 |
+| daiban-guanliqi | 待办管理 |
 
 ---
 
-## 技术配置
+## 记忆系统（三层保护）
 
-- 模型：MiniMax-M2.5
-- GitHub：1776330232/openclaw-workspace1
+| 层级 | 位置 | 作用 |
+|------|------|------|
+| 长期记忆 | MEMORY.md | 精选内容 |
+| 结构化 | memory/ontology/graph.jsonl | 可查询 |
+| 每日 | memory/YYYY-MM-DD.md | 工作日志 |
 
----
-
-## 记忆系统（2026-03-02 加固）
-
-### 三层记忆
-1. **MEMORY.md** - 长期记忆（精选）
-2. **memory/ontology/graph.jsonl** - 结构化知识图谱（ ontology 技能）
-3. **memory/YYYY-MM-DD.md** - 每日工作日志
-
-### 备份策略
-- **GitHub**: 每次重要操作自动 push
-- **本地**: C:\Users\17763\.openclaw\记忆\
-- ** Ontology**: 记录所有记忆的备份状态
-
-### 记忆完整性检查
-- 每次会话开始检查 ontology 图谱
-- 发现问题立即报警
+**备份：GitHub + 本地**
 
 ---
 
-## 记忆格式（2026-03-01 更新）
+## 待办
 
-### 混搭方式
-
-1. **.learnings/** - 结构化学习记录（ID、类型、优先级、总结）
-2. **memory/YYYY-MM-DD.md** - 每日工作日志（完成事项、待办）
-
-两者都要记录，定期推送到 GitHub。
-
+- [ ] 每天11点自动发送日报到Notion
