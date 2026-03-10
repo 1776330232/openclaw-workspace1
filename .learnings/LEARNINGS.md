@@ -1,4 +1,29 @@
-# Learnings
+## [LRN-20260305-001] workflow
+
+**Logged**: 2026-03-05T08:35:00+08:00
+**Priority**: high
+**Status**: resolved
+**Area**: cron
+
+### Summary
+
+给"能力进化-快巡检"cron任务添加超时保护（60秒）和结果推送开关。
+
+### Details
+
+问题：
+- 任务执行超时（90秒）
+- 没有设置timeout参数
+- 结果未推送给用户（deliveryStatus: not-delivered）
+
+改进：
+- 添加 `--timeout-seconds 60` - 超时保护
+- 添加 `--announce` - 推送结果到webchat
+
+### Metadata
+
+- Source: capability-evolver
+- Tags: cron, timeout, reliability
 
 > Corrections, knowledge gaps, best practices
 
@@ -338,3 +363,63 @@ browser 工具配置为 attachOnly 模式，需要：
 
 - Source: error
 - Tags: browser, openclaw, chrome-extension
+
+---
+
+## [LRN-20260304-001] workflow
+
+**Logged**: 2026-03-04T20:36:00+08:00
+**Priority**: critical
+**Status**: resolved
+**Area**: workflow
+
+### Summary
+
+系统级操作（网关重启、服务重载）必须走“保守模式”：先授权、先评估、单步执行，避免中断用户会话。
+
+### Details
+
+今天在修 ACP/Telegram 群权限时，为追求快速生效连续尝试系统级操作，造成会话中断和用户负反馈。核心问题不是技术能力，而是流程纪律不足。
+
+### Suggested Action
+
+以后严格执行：
+1. **无授权不重启**：用户未明确同意，禁止重启网关
+2. **先替代后重启**：优先热更新/局部修复
+3. **一次一改**：每次只改一个变量，立即验证
+4. **失败即停手**：出现异常不连续重试，不“硬刚”
+5. **对话优先级 > 任务完成**：先保证可回复，再做优化
+
+### Metadata
+
+- Source: user_feedback
+- Tags: reliability, gateway, incident, discipline
+
+---
+
+## [LRN-20260304-002] product
+
+**Logged**: 2026-03-04T20:37:00+08:00
+**Priority**: high
+**Status**: resolved
+**Area**: workflow
+
+### Summary
+
+用户对“链接即分析”需求是一次性深度输出，不是持续监控；默认应直接输出深度版。
+
+### Details
+
+用户明确表达：分享链接后希望“一次跑完、给结果、结束”，并且因已快速读过原文，不需要模板和速读版。
+
+### Suggested Action
+
+默认模式改为：
+- 输入：X/B站/YouTube 链接
+- 输出：中文深度版（价值判断、可信度、行动建议）
+- 结束：不自动持续跟踪，除非用户明确要求
+
+### Metadata
+
+- Source: conversation
+- Tags: ux, deep-analysis, workflow, default-behavior

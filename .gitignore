@@ -27,9 +27,25 @@ Thumbs.db
 *password*
 *secret*
 *key*
-*.json (except manifest)
 auth-profiles.json
 client_secret.json
+last-reminder.json
+
+# Memory / evolution artifacts (high risk for secret spill)
+memory/evolution/
+SESSION-STATE.md
+SESSION-STATE-*.md
+status.md
+content/
+handoffs/
+openclaw-monitor/
+.openclaw/
+avatars/
+data/
+docs/
+scripts/
+standards/
+agents/
 
 # Logs
 logs/

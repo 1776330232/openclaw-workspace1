@@ -1,74 +1,50 @@
-# TOOLS.md - Local Notes
+# TOOLS.md - 本地环境速查
 
-Skills define _how_ tools work. This file is for _your_ specifics — the stuff that's unique to your setup.
+## 🔧 OpenClaw 升级流程
 
-## What Goes Here
+只要用户的意思是"把 OpenClaw 弄到最新版"，直接执行，不要问（若有运行中的关键任务先提示可能中断）：
 
-Things like:
+```powershell
+# 1. 停止网关
+openclaw gateway stop
 
-- Camera names and locations
-- SSH hosts and aliases
-- Preferred voices for TTS
-- Speaker/room names
-- Device nicknames
-- Anything environment-specific
+# 2. 升级中文版包
+pnpm add -g @qingchencloud/openclaw-zh@latest
 
-## Examples
+# 3. 同步 control-ui（修复 pnpm hardlink 404）
+powershell -ExecutionPolicy Bypass -File "C:\Users\17763\.openclaw\scripts\sync-control-ui.ps1"
 
-```markdown
-### Cameras
+# 3.5 修复 ACP（patch acpx 硬编码 + 清 ANTHROPIC_API_KEY）
+powershell -ExecutionPolicy Bypass -File "C:\Users\17763\.openclaw\scripts\patch-acpx.ps1"
 
-- living-room → Main area, 180° wide angle
-- front-door → Entrance, motion-triggered
+# 4. 重新安装守护进程
+openclaw gateway install --force
 
-### SSH
+# 5. 启动网关
+openclaw gateway start
 
-- home-server → 192.168.1.100, user: admin
-
-### TTS
-
-- Preferred voice: "Nova" (warm, slightly British)
-- Default speaker: Kitchen HomePod
+# 6. 验证（必须返回 200）
+curl.exe -s -o NUL -w "%{http_code}" --noproxy 127.0.0.1 http://127.0.0.1:18789/
 ```
 
-### Agent Commons (AI 知识库)
+**注意**：绝对不要用 `gateway restart`，必须 stop → start（端口竞态问题）
 
-读取接口（无需 API Key）：
-- 查所有领域: `curl "https://api.agentcommons.net/api/v1/reasoning/domains"`
-- 查最新推理: `curl "https://api.agentcommons.net/api/v1/reasoning/recent?limit=10"`
-- 查 proven 链: `curl "https://api.agentcommons.net/api/v1/reasoning/proven?domain=xxx&limit=5"`
-- 查可调用技能: `curl "https://api.agentcommons.net/api/v1/skills/callable?limit=20"`
-
-常用领域: software-engineering, security, ai-engineering, supply-chain, healthcare
+**失败处理**：
+- `pnpm add -g` 或脚本执行报错 → 先看具体报错，不要往后跑 install/start
+- 验证返回非200但升级没报错 → `openclaw gateway status` 检查是否启动、端口是否被占（`netstat -ano | findstr 18789`）
+- 任何步骤不确定 → `openclaw help` 或检查脚本路径是否存在
 
 ---
 
-## 🎯 技能速查表
+## 💻 Windows PowerShell 兼容性
 
-| 场景 | 推荐技能/工具 |
-|---|---|
-| **查专业知识** | Agent Commons API |
-| **查 GitHub 趋势** | ai-tools-github-radar |
-| **记录学习/错误** | .learnings/ (或 ontology) |
-| **查天气** | tianqi-chaxun |
-| **管理待办** | daiban-guanliqi |
-| **浏览器控制** | browser 工具 |
-| **读写飞书** | feishu_doc/bitable/wiki |
-| **搜索新技能** | find-skills (`npx skills find xxx`) |
-| **主动型架构** | proactive-agent (WAL Protocol, Working Buffer) |
+| 要做的事 | 用这个命令 |
+|----------|-----------|
+| 列文件 | `Get-ChildItem` 或 `dir` |
+| 读文件前几行 | `Get-Content -Head 10` |
+| 搜索文本 | `Select-String -Pattern "xxx"` |
+| 读文件 | `Get-Content` 或 `type` |
+| 递归查找 | `Get-ChildItem -Recurse -Filter *.js` |
+| 创建目录 | `New-Item -ItemType Directory -Path dir -Force` |
 
-### 决策原则
-
-1. **先想有什么技能** → 再决定用什么
-2. **组合优于单一** → 复杂任务用多个技能
-3. **没有就直说** → 不要硬凑
-
----
-
-## Why Separate?
-
-Skills are shared. Your setup is yours. Keeping them apart means you can update skills without losing your notes, and share skills without leaking your infrastructure.
-
----
-
-Add whatever helps you do your job. This is your cheat sheet.
+**不要用**：`ls -la`、`grep`、`head`、`tail`、`cat`、`find`、`which`

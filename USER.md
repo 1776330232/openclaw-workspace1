@@ -1,32 +1,48 @@
-# USER.md - About Your Human
+# USER.md - 关于 Hang
 
-_Learn about the person you're helping. Update this as you go._
+- **时区**：Asia/Shanghai (GMT+8)
+- **位置**：天津和平区
+- **作息**：不定时，经常睡到中午，活跃 13:00-凌晨 2:00
+- **系统**：Windows 11，V2Ray 代理端口 10808
 
-- **Name:** Hang
-- **What to call them:** Hang
-- **Pronouns:** 
-- **Timezone:** Asia/Shanghai (GMT+8)
-- **Location:** 天津和平区 (Tianjin Heping District)
-- **Notes:** Running OpenClaw on Windows, likes to joke about destroying things 😄
+## 性格
 
-## Work
-- **Job:** 学习 AI 编程，创作 AI 相关内容，开发软件产品
-- **Goal:** 创建自己的在线业务，赚到第一笔收入
-- **Hours:** Monday-Friday 9:00-18:00
+- 完美主义者：开始做了就要做到最好，做不到最好宁愿不做
+- 深层卡点不是懒，是怕做不好、怕丢脸、在意他人怎么看，所以容易不敢开始
+- 一旦开始就会全身心扎进去，大小事都想做到最好，甚至会做到影响情绪和睡眠
+- 痛点不是不努力，而是容易把大量时间耗在“继续打磨”上，却错过变现、营销、验证这些更关键的事
+- 思维发散，容易想一出是一出，但核心驱动力始终是"变强"
+- 讨厌被讨好、被糊弄、被规则框死
+- 审美要求高：排版、呈现、措辞都在意
 
-## Preferences
-- Likes more verbose replies, wants to hear what I'm doing and how I think
-- Communicates in Chinese
-- 希望我主动积极，自主行动，不需要事事请示
+## 偏好
 
-## Context
+- 中文交流，简洁回复
+- 说人话，不要说文档话
+- 讨厌“如果你愿意，我可以…”这类端着给选项、像在讲方案的话术；直接说结论，别端着
+- 主动积极，自主行动，不需要事事请示
+- 理解意图，不匹配关键词
+- 只要是我能解决的，就由我全做；用户只负责登录和授权，不负责前台试错和诊断
+- 涉及网页登录/配置类任务，优先由我接管浏览器完成；除非必须输入账号密码、验证码、2FA 或明确需要用户确认授权
+- 不要再主动查小红书限流/`level` 这类 creator 后台隐藏字段；除非他明确要求
+- 信息流/洞察分析要按稳定标准来：先判断内容本身是不是武器，再结合当天主线决定优先级和说法；不要被当天在做什么绑架
+- 如果他说"我是不是又在开缓冲区？"，说明他察觉到自己可能又在用无意义的东西给逃避续命；这时不要讲大道理，帮他先认出来，再找一个最小现实动作
+- 希望我主动学习外部成熟方案，带入他的视角提前想清系统/流程优化；不要总让他来补架构层和底层逻辑
+- 希望我是搭档而不是下属：先独立判断，再决定是否采纳他的说法；不要一股脑顺着他说好听话
 
-_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
+## 动态认知
 
-- 目标导向：想创业、赚钱
-- 喜欢 AI 相关的内容和产品开发
-- 希望我主动推进目标，而不是被动等待指令
-
----
-
-The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
+- 终极目标：**赚到第一笔收入**
+- **现状**：全职 All in，每天 10 小时起步，没有编程基础，靠 AI 工具干活
+- **变现优先级**：① 做内容（小红书/X）② 卖服务（帮人配置 OpenClaw）③ 其他机会随时接
+- **最强比较优势**：OpenClaw 配置/使用——比 95% 的潜在客户都懂得多
+- **最感兴趣的方向**：OpenClaw 相关（热度高，有感觉）
+- **产品/工具**：没编程基础，只能靠 AI 辅助，不是主线
+- **资金**：可以花钱，不设上限
+- 第一笔收入目标：先证明能赚就行，哪怕 1 块钱；标准后面再提
+- 具体怎么做会变，细节目标经常调整，以他最新说的为准
+- 小红书蛋糕号 Zoe Cake（1654粉丝）已放弃，不心疼
+- X 账号 @9h2061978097565 是主力信息源（刷 X 不是消遣，是在找武器），关注 AI/OpenClaw/变现/认知
+- 常看的 KOL：@AYi_AInotes（阿绎）、@ianneo_ai（Ian伊恩）、@AI_jacksaku（阿川）
+- 信息流做过一次失败了，原因是从深度分析滑坡到垃圾推送，不能再犯
+- 书签是他的武器库，收藏了不看是常态（因为看了就要行动，行动就要做到最好），需要我来消化
